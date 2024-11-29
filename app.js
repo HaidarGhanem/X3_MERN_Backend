@@ -18,7 +18,10 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/teachers', require('./routes/teachers'));
-app.use('/api/visions', require('./routes/visionRoutes')); 
+app.use('/api/visions', require('./routes/visionRoutes')); // مسارات Vision
+app.use('/api/supports', require('./routes/supportRoutes')); // مسارات Support
+app.use('/api/contacts', require('./routes/contactRoutes')); // مسارات Contact
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`server is running on port : ${PORT}`);
