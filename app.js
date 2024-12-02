@@ -17,6 +17,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use('/api/auth' ,require('./routes/auth'))
 app.use('/api/teachers' ,require('./routes/teachers'))
 app.use('/api/faqsection',require('./routes/faqSection'))
+app.use('/api/studentLearn',require('./routes/studentLearn'))
 
 app.listen(PORT , ()=>{
     console.log(`server is running on port : ${PORT}`)
